@@ -1,0 +1,15 @@
+{
+  "model_name": "log_linear",
+  "features": [
+    "course",
+    "type",
+    "difficulty"
+  ],
+  "test_metrics": {
+    "mae": 1.6679015297952573,
+    "rmse": 3.0412953826171107,
+    "r2": 0.8368548246336259
+  },
+  "train_date": "2026-11-08",
+  "seed": 595
+}
