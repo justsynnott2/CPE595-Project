@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#174c40">
+  <title>CPE 595 · Student Planner</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="src/dates.js"></script>
+  <script defer src="src/data.js"></script>
+  <script defer src="src/app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#assignments">CPE 595</a>
+      <p class="sidebar-label">YOUR WORKSPACE</p>
+      <nav aria-label="Main navigation">
+        <a href="#assignments" data-page="assignments"><span aria-hidden="true">▤</span>Assignments</a>
+        <a href="#calendar" data-page="calendar"><span aria-hidden="true">▦</span>Calendar</a>
+        <a href="#schedule" data-page="schedule"><span aria-hidden="true">◷</span>Study Schedule</a>
+      </nav>
+      <div class="profile"><span class="avatar">ST</span><div><strong>Student workspace</strong><small>CPE 595 · Demo mode</small></div></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><span>My workspace <span class="breadcrumb">/ <span id="breadcrumb">Assignments</span></span></span><span class="demo-pill"><span></span> Demo data · saved on this device</span></header>
+      <main id="main" tabindex="-1"></main>
+      <footer>Built for a more balanced semester.<span>AI-Powered Student Planner · CPE 595</span></footer>
+    </div>
+  </div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <dialog id="assignment-dialog" aria-labelledby="form-title">
+    <form id="assignment-form">
+      <div class="dialog-heading"><div><span class="eyebrow">MAKE A PLAN</span><h2 id="form-title">New assignment</h2></div><button type="button" class="icon-button" data-close aria-label="Close assignment form">×</button></div>
+      <input type="hidden" name="id">
+      <label>Assignment title<input name="title" required maxlength="120" placeholder="e.g. Neural networks problem set"></label>
+      <label>Course<input name="course" required maxlength="60" placeholder="e.g. CPE 595"></label>
+      <div class="form-grid"><label>Type<select name="type"><option>Homework</option><option>Lab</option><option>Reading</option><option>Exam</option><option>Project</option></select></label><label>Difficulty<select name="difficulty"><option>Easy</option><option selected>Medium</option><option>Hard</option></select></label></div>
+      <div class="form-grid"><label>Due date<input type="date" name="due_date" required></label><label>Status<select name="status"><option>Not Started</option><option>In Progress</option><option>Done</option></select></label></div>
+      <label>Actual study hours <span class="muted">(optional)</span><input name="actual_hrs" type="number" min="0" max="1000" step="0.25" placeholder="Not recorded"></label>
+      <p id="form-error" class="error-text" role="alert"></p>
+      <div class="dialog-actions"><button type="button" class="button secondary" data-close>Cancel</button><button type="submit" class="button primary" id="save-button">Save assignment</button></div>
+    </form>
+  </dialog>
+  <dialog id="delete-dialog" aria-labelledby="delete-title"><form method="dialog"><span class="eyebrow">REMOVE ASSIGNMENT</span><h2 id="delete-title">Delete this assignment?</h2><p id="delete-description"></p><p class="muted">Its demo study sessions will also be removed. This cannot be undone.</p><p id="delete-error" class="error-text" role="alert"></p><div class="dialog-actions"><button class="button secondary" value="cancel">Cancel</button><button type="button" id="confirm-delete" class="button danger">Delete assignment</button></div></form></dialog>
+</body>
+</html>
