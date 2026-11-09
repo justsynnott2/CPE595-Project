@@ -228,3 +228,5 @@ node_modules/
 
 ml/data/*
 !ml/data/.gitkeep
+!ml/data/generate.py
+!ml/data/synthetic_assignments.csv
