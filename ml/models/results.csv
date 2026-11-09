@@ -1,0 +1,11 @@
+model,include_days,cv_mae_mean,cv_mae_std,cv_rmse_mean,cv_rmse_std,cv_r2_mean,cv_r2_std,test_mae,test_rmse,test_r2,selected
+baseline_type_mean,True,2.1135,0.1389,3.7316,0.5016,0.6522,0.0121,2.1424,4.0431,0.7117,False
+linear,True,1.8480,0.0583,3.1793,0.4423,0.7477,0.0122,2.1965,3.6664,0.7629,False
+log_linear,True,1.4027,0.1334,2.4872,0.3394,0.8452,0.0129,1.6630,3.0592,0.8349,False
+random_forest,True,1.6171,0.0730,2.7414,0.1776,0.8085,0.0222,1.9511,3.7927,0.7463,False
+hist_gradient_boosting,True,1.5991,0.0793,2.8326,0.3618,0.7986,0.0191,1.7053,3.0893,0.8317,False
+baseline_type_mean,False,2.1135,0.1389,3.7316,0.5016,0.6522,0.0121,2.1424,4.0431,0.7117,False
+linear,False,1.8358,0.0645,3.1563,0.4671,0.7519,0.0140,2.2018,3.6647,0.7631,False
+log_linear,False,1.3974,0.1489,2.4885,0.3814,0.8455,0.0163,1.6679,3.0413,0.8369,True
+random_forest,False,1.4845,0.0898,2.5908,0.3153,0.8311,0.0181,1.7532,3.4977,0.7842,False
+hist_gradient_boosting,False,1.4892,0.1334,2.6141,0.4051,0.8298,0.0152,1.6573,2.9920,0.8421,False
